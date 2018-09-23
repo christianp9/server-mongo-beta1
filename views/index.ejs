@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/178/178502.svg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js">
+
+
+
+  </script>
+
+  <title>MI PRIMER SERVER</title>
+
+</head>
+
+<body class="ui container">
+
+  <br>
+  <form  action="/registro" method="POST" class="ui form">
+    <div class="field">
+      <label for="">Nombre</label>
+      <input type="text" name="name" id="nombre" placeholder="nombre">
+    </div>
+    <div class="field">
+      <label for="">image 1</label>
+      <input type="text" name="img" id="img" placeholder="imagen .png .jpg .gif">
+    </div>
+    <div class="field">
+      <label for="">image 2</label>
+      <input type="text" name="img2" id="img2" placeholder="imagen .png .jpg .gif">
+    </div>
+    <br>
+    <div class="field">
+      <label for="">description</label>
+      <input type="text" name="des" id="des" placeholder="description">
+    </div>
+    <input class="ui button" value="Enviar" type="submit">
+
+  </form>
+
+
+  <!-- <li><a href="/"><button class="ui inverted green button">Green</button></a> </li> -->
+  <div class="ui stackable grid" style="margin: 10px">
+    <% for(let i = 0; i < arr.length ; i++){ %>
+    <div class="four wide column">
+      <div class="ui link cards">
+        <div class="card">
+
+          <div class="ui slide masked reveal image">
+            <img src="<%= arr[i].img %>"
+              class="visible content">
+            <img src="<%= arr[i].img2 %>" class="hidden content">
+          </div>
+          <div class="content">
+            <a class="header">
+              <a class="header">
+                <%=arr[i].name%>
+              </a>
+
+            </a>
+            <div class="meta">
+              <span class="date">
+              </span>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="users icon"></i>
+              <%= arr[i].des %>
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <%}%>
+    <!-- <style type="text/css">
+    body {
+      background-image: url("http://dissenyaweb.com/blog/diseno_web/wp-content/uploads/background2-1024x640.jpg");
+
+    }
+  </style> -->
+
+    <script>
+      let a1 = 10;
+
+
+
+      function msg() {
+        console.log('enviando')
+      }
+
+      // function repetir1() {
+      //   let repetir = document.getElementsByName("repetir").values;
+
+
+      // }
+      function users() {
+        let repetir = document.getElementsByName("user").values;
+
+
+      }
+
+
+
+    </script>
+
+    <!-- <style type="text/css">
+      body {
+        background-image: url("http://dissenyaweb.com/blog/diseno_web/wp-content/uploads/background2-1024x640.jpg");
+        background-color: #FFFFFF;
+        background-repeat: repeat-x;
+      }
+      </style>  -->
+
+</body>
+
+</html>
